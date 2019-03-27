@@ -4,17 +4,17 @@ function myFunction() {
   // These here are tailored to be easily entered and read from a spreadsheet or other relational database...
 
   const calId = 'somenumbers12345@group.calendar.google.com';
-  var title = 'TEST EVENT'; // 'Google I/O 2015'
-  var location = '14 E 23rd St New York, NY 10010'; // '800 Howard St., San Francisco, CA 94103'
-  var description = 'Margs and tacos- nuff said!'; // 'A chance to hear more about Google\'s developer products.'
-  var timeZone = 'America/New_York'; // 'America/Los_Angeles'
-  var startDateTime = '2019-03-01T17:00:00-05:00'; // '2015-05-28T09:00:00-07:00'
-  var endDateTime = '2019-03-01T18:30:00-05:00'; // '2015-05-28T17:00:00-07:00'
-  var recurrenceRule = 'RRULE:FREQ=WEEKLY;INTERVAL=2;COUNT=3'; // 'RRULE:FREQ=DAILY;COUNT=2'
-  var attendees = 'user1@domA.com,user2@domA.com,user1@domB.com'; // 'user1@domA.com,user2@domA.com,user3@domB.com'
-  var remOverrides = 'email,30,email,24*60,email,24*60*7'; // '[{'method':, 'minutes':},{}] 'email,24 * 60,popup,15' stringified sequential
+  const title = 'TEST EVENT'; // 'Google I/O 2015'
+  const location = '14 E 23rd St New York, NY 10010'; // '800 Howard St., San Francisco, CA 94103'
+  const description = 'Margs and tacos- nuff said!'; // 'A chance to hear more about Google\'s developer products.'
+  const timeZone = 'America/New_York'; // 'America/Los_Angeles'
+  const startDateTime = '2019-03-01T17:00:00-05:00'; // '2015-05-28T09:00:00-07:00'
+  const endDateTime = '2019-03-01T18:30:00-05:00'; // '2015-05-28T17:00:00-07:00'
+  const recurrenceRule = 'RRULE:FREQ=WEEKLY;INTERVAL=2;COUNT=3'; // 'RRULE:FREQ=DAILY;COUNT=2'
+  const attendees = 'user1@domA.com,user2@domA.com,user1@domB.com'; // 'user1@domA.com,user2@domA.com,user3@domB.com'
+  const remOverrides = 'email,30,email,24*60,email,24*60*7'; // '[{'method':, 'minutes':},{}] 'email,24 * 60,popup,15' stringified sequential
                       // key-value pairs separated by comma. eval() the separated strings when assigning to object
-  var remUseDefault = false; // always false unless you want default reminders...
+  const remUseDefault = false; // always false unless you want default reminders...
   
   // Construct recurrArr, attendArr, and remindArr array-objects to put into calendar.events.insert call
   
@@ -23,7 +23,6 @@ function myFunction() {
   
   // Attendees - an array of objects
   const attendArr = [];
-  var attendeesArr = attendees.split(',');
   attendeesArr.forEach(function(element){
     attendArr.push({'email': element})
   });
